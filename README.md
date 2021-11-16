@@ -61,3 +61,8 @@
 ### jupyter
 - ipynb를 py로 변환
  - jupyter nbconvert --to script [filename].ipynb 
+
+### commit message
+```
+git config .git-commit-template.txt
+```
