@@ -1,7 +1,5 @@
 [Type] Title
-# 타입 : feat / fix / docs / test 
-# 50자 이하. 마지막에 마침표 찍지 않기
-
+# 제목은 50자 이하. 마지막에 마침표 찍지 않기. 타입 : feat / fix / docs / test 
 - Why
 
 - How
