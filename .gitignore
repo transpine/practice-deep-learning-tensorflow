@@ -1,0 +1,8 @@
+/.env
+
+/data
+/model
+/models
+/output
+/result
+*_checkpoint
