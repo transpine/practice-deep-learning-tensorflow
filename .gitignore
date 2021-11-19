@@ -6,3 +6,6 @@
 /output
 /result
 *_checkpoint
+
+**/annotations
+**/train**

@@ -57,6 +57,13 @@
  - 한국어 글자체 이미지 : https://aihub.or.kr/aidata/133
  - http://101.101.175.217:8080/static/aiocr/learning
  - CarPlate : https://www.kaggle.com/andrewmvd/car-plate-detection
+#### 큰 JSON 파일 formatting
+```
+$cat ugly.json | python -mjson.tool > pretty.json
+```
+```
+>type ugly.json | python -mjson.tool > pretty.json
+```
 
 ### jupyter
 - ipynb를 py로 변환
