@@ -25,6 +25,14 @@
   - python 버전 지정 설치
     - virtualenv venv --python=python2.7
 - pip install gin-config lvis 
+
+#### macOS(apple silicon / m1pro)
+- anaconda로 진행한다. (apple manual이 anaconda)
+  - https://developer.apple.com/metal/tensorflow-plugin/
+  - 사이트에 가이드하는대로 설정후 numpy만 다시 설치
+    ```
+    python -m pip install numpy==1.19.2
+    ```
 ### object detection API
 - https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/install.html
 - 과정
