@@ -9,3 +9,12 @@
 
 **/annotations
 **/train**
+
+__pycache__
+Data_zoo
+logs
+checkpoints
+tensorboard_logs
+
+test.py
+test.ipynb

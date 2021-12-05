@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+ 
 import tensorflow
 import os
 import tensorflow.keras as keras
@@ -5,12 +7,13 @@ import json
 from sklearn.utils import shuffle
 from devfacPyLogger import log
 from utils import load_image
-import tqdm
+from tqdm import tqdm
 import numpy as np
 
  # Caption annotation 압축파일을 다운받고, annotations 폴더에 압축을 풉니다.
-def download_and_extract():
-    annotation_dir = '/annotations/'
+def maybe_download_and_extract():
+    # annotation_dir = '/annotations/'
+    annotation_dir = '\\annotations\\'
     
     if not os.path.exists(os.path.abspath('.') + annotation_dir):
       # cache_subdir을 주어야 현재 위치에 압축이 풀린다.
@@ -24,7 +27,8 @@ def download_and_extract():
     else:
       annotation_file = os.path.abspath('.') + annotation_dir + 'captions_train2014.json'
 
-    image_folder = '/train2014'
+    # image_folder = '/train2014/'
+    image_folder = '\\train2014\\'
 
     if not os.path.exists(os.path.abspath('.') + image_folder):
       image_zip = keras.utils.get_file('train2014.zip',
@@ -39,7 +43,7 @@ def download_and_extract():
     return annotation_file, PATH
 
 def prepare_image_and_caption_data(num_examples=30000):
-  annotation_file, PATH = download_and_extract()
+  annotation_file, PATH = maybe_download_and_extract()
 
   with open(annotation_file, 'r') as f:
     annotations = json.load(f)
@@ -84,5 +88,5 @@ def cache_bottlenecks(img_name_vector, image_features_extract_model):
 
     for bf, p in zip(batch_features, path):
       path_of_feature = p.numpy().decode('utf-8')
-      log.debug('p:', p)
+      # log.debug(f'p: {p}')
       np.save(path_of_feature, bf.numpy())
